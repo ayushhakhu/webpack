@@ -52,4 +52,4 @@ jobs:
           app-name: 'ayushtestapp'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F44B0490A63E4DE49D2233D52EA3F55B }}
-          package: ./dist
+          package: .
