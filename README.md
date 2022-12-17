@@ -20,4 +20,5 @@ https://heartfelt-bunny-6eb989.netlify.app/
 
 **Using Azure Container Registry to Store Docker Image and Deploy it using Azure Container Instance**
 
-![image](https://user-images.githubusercontent.com/57040928/208238095-abef14b9-a99f-48c8-a8db-48a626d22eb2.png)
+![image](https://user-images.githubusercontent.com/57040928/208238157-0e427e9b-701c-4353-aa72-189ef2feec30.png)
+
