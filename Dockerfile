@@ -1,16 +1,32 @@
-FROM node:latest
-
-RUN npm install webpack -g
-
-WORKDIR /tmp
-COPY package.json /tmp/
-RUN npm config set registry http://registry.npmjs.org/ && npm install
-
-WORKDIR /usr/src/app
-COPY . /usr/src/app/
-RUN cp -a /tmp/node_modules /usr/src/app/
-
-RUN webpack
+# Fetching the latest node image on apline linux
+FROM node:alpine AS builder
 
 
-EXPOSE 8000
+# Setting up the work directory
+WORKDIR /app
+
+# Installing dependencies
+COPY ./package.json ./
+RUN npm install
+
+# Copying all the files in our project
+COPY . .
+
+# Building our application
+RUN npm run build
+
+# Fetching the latest nginx image
+FROM nginx:1.21.0-alpine as production
+
+# Copying built assets from builder
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Copying our nginx.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
+
