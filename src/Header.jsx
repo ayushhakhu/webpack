@@ -4,6 +4,7 @@ export const Header = () => {
   return (
     <>
       <h2>Shaadi</h2>
+      <h4>Jaldi Shaadi krle</h4>
       <ul
         style={{
           listStyle: "none",
