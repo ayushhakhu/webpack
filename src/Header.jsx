@@ -3,7 +3,7 @@ import React from "react";
 export const Header = () => {
   return (
     <>
-      <h2>Header Component</h2>
+      <h2>Shaadi</h2>
       <ul
         style={{
           listStyle: "none",
