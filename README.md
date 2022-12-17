@@ -8,3 +8,10 @@ This is App service deployment as code with github actions
 
 
 App service deployment as docker container to azure
+
+
+Deployment to Netlify
+
+https://heartfelt-bunny-6eb989.netlify.app/
+
+![image](https://user-images.githubusercontent.com/57040928/208225324-c09e7c34-218f-400c-906d-32aefdc65b3f.png)
