@@ -3,8 +3,7 @@ import React from "react";
 export const Header = () => {
   return (
     <>
-      <h2>Shaadi</h2>
-      <h4>Jaldi Shaadi krle</h4>
+      <h2>Main Website</h2>
       <ul
         style={{
           listStyle: "none",
